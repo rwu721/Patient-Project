@@ -1,6 +1,11 @@
-FactoryGirl.define do
-	factory :micropost do
+	FactoryGirl.define do
+  factory :user do
+    name     "Michael Hartl"
+    email    "michael@example.com"
+    password "foobar"
+    password_confirmation "foobar"
+  end
+  factory :micropost do
 	text "this is a micropost"
 	end
-	end
-	
+end

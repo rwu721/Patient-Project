@@ -1,7 +1,10 @@
 RayWuPatientProject::Application.routes.draw do
-  devise_for :users
+
+  get "users/new"
 
   resources :microposts
+  resources :users
+  
 
   #get "microposts/new"
 
@@ -12,6 +15,7 @@ RayWuPatientProject::Application.routes.draw do
 
    root to: 'static_pages#home'
    
+  match '/signup',  to: 'users#new'
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
