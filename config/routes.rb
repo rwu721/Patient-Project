@@ -2,7 +2,7 @@ RayWuPatientProject::Application.routes.draw do
 
   get "users/new"
 
-  resources :microposts
+  resources :microposts, only: [:create, :destroy]
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
